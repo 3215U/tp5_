@@ -22,12 +22,11 @@ public class UsuarioServiceImp implements IUsuarioService {
 	@Override
 	public void guardar() {
 		iusuario.guardar();
-
 	}
 
 	@Override
 	public Usuario mostrar() {
-		Usuario usuario =iusuario.mostrar();
+		Usuario usuario = iusuario.mostrar();
 		return usuario;
 	}
 
@@ -39,7 +38,7 @@ public class UsuarioServiceImp implements IUsuarioService {
 
 	@Override
 	public Usuario modificar() {
-		Usuario usuario =iusuario.modificar();
+		Usuario usuario = iusuario.modificar();
 		return usuario;
 	}
 

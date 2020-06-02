@@ -9,41 +9,42 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import ar.edu.unju.fi.Benicio3215Tp5Application;
-import ar.edu.unju.fi.model.Usuario;
+import ar.edu.unju.fi.model.Cuota;
 
 /**
  * @author Benicio Roxana
  *
  */
-@Repository("usuarioImp")
-public class UsuarioImp implements IUsuario {
+@Repository("/cuotaImp")
+public class CuotaImp implements ICuota {
 
 	@Autowired
-	private Usuario usuario;
+	private Cuota cuota;
 	
 	public static Logger LOG = LoggerFactory.getLogger(Benicio3215Tp5Application.class);
 	@Override
 	public void guardar() {
 		// accion ejecutada para guardar un obeto usuario en la BD
-		LOG.info("El usuario fue guardado: " + usuario.getApellido()+", "+usuario.getNombre());
+		LOG.info("La cuota fue guarda: "+cuota.getPeriodo()+", "+cuota.getMonto());
 	}
 
 	@Override
-	public Usuario mostrar() {
-		// Se recuperan todos los datos del usuario
-		LOG.info("Mostrar los datos del usuario");
-		return usuario;
+	public Cuota mostrar() {
+		// TODO Auto-generated method stub
+		LOG.info("Mostrar los datos de la cuota");
+		return cuota;
 	}
 
 	@Override
 	public void eliminar() {
-		// Se elimino el obeto usuario de bd
-		LOG.info("Se elimino el usuario de bd");
+		// TODO Auto-generated method stub
+		LOG.info("Se elimino la cuota de bd");
 	}
 
 	@Override
-	public Usuario modificar() {
-		return usuario;
+	public Cuota modificar() {
+		// TODO Auto-generated method stub
+		return cuota;
 	}
 
 }
